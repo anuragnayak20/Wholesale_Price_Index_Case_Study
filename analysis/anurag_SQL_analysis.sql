@@ -1,0 +1,25 @@
+CREATE  DATABASE WPI;
+
+USE WPI;
+
+START TRANSACTION;
+CREATE TABLE IF NOT EXISTS wpi_yoy_mini (
+year int PRIMARY KEY,
+Bajra DOUBLE,
+Moong DOUBLE,
+Masur	DOUBLE,
+Peas	DOUBLE,
+Cauliflower	DOUBLE,
+Okra DOUBLE,
+Beans	DOUBLE,
+Drumstick	DOUBLE,
+Orange	DOUBLE,
+Cashews	DOUBLE,
+Grapes DOUBLE,
+WPI DOUBLE
+);
+
+SELECT * FROM wpi_yoy_mini;
+COMMIT;
+
+
