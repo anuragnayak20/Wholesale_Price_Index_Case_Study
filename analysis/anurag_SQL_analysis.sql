@@ -1,32 +1,4 @@
-SELECT *FROM cpi_data LIMIT 1;
-SELECT * FROM wpi_commodity_info LIMIT 1;
-SELECT * FROM wpi_energy LIMIT 2;
-SELECT * FROM wpi_food LIMIT 1;
-SELECT * FROM wpi_last_year_all_commodity_sql LIMIT 1;
-SELECT * FROM wpi_monthly_sql LIMIT 1;
-
-ALTER TABLE wpi_last_year_all_commodity RENAME TO wpi_last_year_all_commodity_sql; 
-
-
-SELECT commodity, ROUND(AVG(weighted_index),2) AS avg_price_index 
-FROM wpi_last_year_all_commodity_sql WHERE commodity LIKE '%manufacturing%'
-GROUP BY commodity
-UNION
-SELECT commodity, ROUND(AVG(weighted_index),2) AS avg_price_index 
-FROM wpi_last_year_all_commodity_sql WHERE commodity LIKE '%MANUFACTURING%'
-GROUP BY commodity
-UNION
-SELECT commodity, ROUND(AVG(weighted_index),2) AS avg_price_index 
-FROM wpi_last_year_all_commodity_sql WHERE commodity LIKE '%MANUFACTURE%'
-GROUP BY commodity
-ORDER BY avg_price_index DESC;
-
-SELECT mom_id,commodity,
-MAX(weighted_index) OVER (PARTITION BY commodity) AS max_price,
-MIN(weighted_index) OVER (PARTITION BY commodity) AS min_price,
-MAX(weighted_index) OVER (PARTITION BY commodity) - MIN(weighted_index) OVER (PARTITION BY commodity) AS volatility
-FROM wpi_last_year_all_commodity_sql;
-
+-- DDL part of analysis
 START transaction;
 SET SQL_SAFE_UPDATES = 0;
 ALTER TABLE wpi_energy ADD date DATE AFTER mom_id;
@@ -41,3 +13,54 @@ UPDATE wpi_last_year_all_commodity_sql SET date = STR_TO_DATE(CONCAT('01-',RIGHT
 ALTER TABLE wpi_monthly_sql ADD date DATE AFTER mom_id;
 UPDATE wpi_monthly_sql SET date = STR_TO_DATE(CONCAT('01-',RIGHT(mom_id,3),'-',LEFT(mom_id,4)),'%d-%M-%Y');
 commit;
+
+-- creating views
+-- food
+CREATE VIEW wpi_food_view AS
+SELECT mom_id, date, commodity, weighted_index FROM wpi_comm WHERE LOWER(commodity) LIKE '%food%';
+-- manufacturing
+CREATE VIEW wpi_mfg_view AS
+SELECT mom_id, date, commodity, weighted_index 
+FROM wpi_comm 
+WHERE LOWER(commodity) LIKE '%manufacturing%' OR LOWER(commodity) LIKE '%manufacture%';
+-- fuel, energy
+CREATE VIEW wpi_energy_view AS 
+SELECT mom_id, date, commodity, weighted_index FROM wpi_comm 
+WHERE LOWER(commodity) LIKE '%fuel%' OR LOWER(commodity) LIKE '%power%'
+OR LOWER(commodity) LIKE '%energy%'
+OR LOWER(commodity) LIKE '%kerosene%'
+OR LOWER(commodity) LIKE '%petroluem%'
+OR LOWER(commodity) LIKE '%coal%'
+OR LOWER(commodity) LIKE '%lignite%'
+OR LOWER(commodity) LIKE '%bitumen%'
+OR LOWER(commodity) LIKE '%electricity%'
+OR LOWER(commodity) LIKE '%lpg%'
+OR LOWER(commodity) LIKE '%natural gas%';
+-- primary articles
+CREATE VIEW wpi_primary_articles AS 
+SELECT mom_id, date, commodity, weighted_index FROM wpi_comm 
+WHERE commodity NOT IN (
+SELECT commodity FROM wpi_energy_view
+UNION 
+SELECT commodity FROM wpi_mfg_view
+);
+-- these will be subqueries to derive wpi for specific sub categories
+-- wpi value of only mfg
+SELECT 
+mom_id,date, ROUND(AVG(weighted_index),2) AS wpi_mfg
+FROM wpi_mfg_view
+GROUP BY mom_id, date
+ORDER BY date;
+-- wpi value of only primary articles
+SELECT 
+mom_id,date, ROUND(AVG(weighted_index),2) AS wpi_pa
+FROM wpi_primary_articles
+GROUP BY mom_id, date
+ORDER BY date;
+-- wpi value of only energy
+SELECT 
+mom_id,date, ROUND(AVG(weighted_index),2) AS wpi_energy
+FROM wpi_energy_view
+GROUP BY mom_id, date
+ORDER BY date;
+

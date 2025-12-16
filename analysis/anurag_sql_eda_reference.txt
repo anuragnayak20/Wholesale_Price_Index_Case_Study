@@ -1,0 +1,23 @@
+4.2. Short-to-Medium Term Trend Analysis
+	- Trend analysis for the last 12 months for:
+		1. Manufactured Products
+		2. Primary Articles
+		3. Fuel and Power
+       		4. Full WPI (All Commodities)
+		5. YoY and MoM trend analysis of WPI to identify periods of intense inflation.
+(Methodology: Calculate Year-over-Year (YoY) and Month-over-Month (MoM) inflation rates for all categories, applying a time-series decomposition to isolate trend and seasonality.)
+
+4.3. Impact of Exogenous (Global) Events
+	- Effect of global events on WPI, specifically:
+	Black Swan Event – Covid-19 (Dec 2019 to May 2023): Analysing the supply-chain disruptions, initial demand 	collapse, and subsequent inflationary surge.
+	- Oil Prices: Quantifying the correlation between international crude oil price movements and the 'Fuel & 	Power' and 'Manufactured Products' WPI sub-indices.
+	- Russia–Ukraine War (started in Feb 2022): Assessing the impact on global commodity prices (e.g.,     		sunflower oil, crude oil, fertilisers) and their transmission into the Indian WPI.
+(Methodology: Employ event-study analysis and regression models (e.g., VAR/VECM) to quantify the magnitude and duration of the impact of these events on WPI inflation.)
+
+4.4. Weight-Influence Relationship
+	- Do commodity weights affect the influence a particular commodity has on WPI? (i.e., what is the 	relationship between the correlation coefficient and the weight of a commodity).
+
+4.5. WPI-CPI Linkage and Predictive Power
+	- Exploring the relationship between WPI and CPI:
+	- Are trends in WPI (YoY and MoM) reflected in CPI?
+	Can WPI help us predict CPI trends (specifically, times when CPI crossed the threshold of 2-4%)?
