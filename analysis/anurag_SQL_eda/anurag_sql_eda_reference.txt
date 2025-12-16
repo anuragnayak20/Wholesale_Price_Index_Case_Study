@@ -1,10 +1,19 @@
+4.1. Identifying Primary Inflationary Drivers
+	Most contributing commodity & category to WPI for the last:
+		1.Last month
+		2.Last 6 months
+		3.Last 12 months
+		4.Last 24 months
+(Methodology: Contribution will be measured by isolating the weighted price change of each commodity group/commodity to the total change in the All Commodities WPI.)
+
 4.2. Short-to-Medium Term Trend Analysis
 	- Trend analysis for the last 12 months for:
-		1. Manufactured Products
-		2. Primary Articles
-		3. Fuel and Power
-       		4. Full WPI (All Commodities)
-		5. YoY and MoM trend analysis of WPI to identify periods of intense inflation.
+		1. Manufactured Products [non-uniform trend , inflation 5/9 months, low inflation]
+		2. Primary Articles (Food only) [non-uniform trend, inflation 4/9 months, highest inflation]
+		3. Fuel and Power [usually negative trend, inflation 3/9 months, low inflation]
+       		4. Full WPI (All Commodities) [peak inflation at July 2023]
+	- YoY and MoM trend analysis of WPI to identify periods of intense inflation.
+	  [2023 Jul WPI mom peak, 2022 peak YoY WPI]
 (Methodology: Calculate Year-over-Year (YoY) and Month-over-Month (MoM) inflation rates for all categories, applying a time-series decomposition to isolate trend and seasonality.)
 
 4.3. Impact of Exogenous (Global) Events
@@ -16,8 +25,12 @@
 
 4.4. Weight-Influence Relationship
 	- Do commodity weights affect the influence a particular commodity has on WPI? (i.e., what is the 	relationship between the correlation coefficient and the weight of a commodity).
+	[total - 838 & low-weight but high correl 698 -> WPI is biased towards 140 commodities]
 
 4.5. WPI-CPI Linkage and Predictive Power
 	- Exploring the relationship between WPI and CPI:
 	- Are trends in WPI (YoY and MoM) reflected in CPI?
 	Can WPI help us predict CPI trends (specifically, times when CPI crossed the threshold of 2-4%)?
+	[usually if WPI inflation -> CPI also inflation
+	BUT WPI deflation NOT affecting CPI deflation
+	ALSO CPI breaching (2,6)% not affected by WPI trends]
