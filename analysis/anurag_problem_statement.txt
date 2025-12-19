@@ -30,7 +30,7 @@
 4.5. WPI-CPI Linkage and Predictive Power
 	- Exploring the relationship between WPI and CPI:
 	- Are trends in WPI (YoY and MoM) reflected in CPI?
-	Can WPI help us predict CPI trends (specifically, times when CPI crossed the threshold of 2-4%)?
+	Can WPI help us predict CPI trends (specifically, times when CPI crossed the threshold of 2-6%)?
 	[usually if WPI inflation -> CPI also inflation
 	BUT WPI deflation NOT affecting CPI deflation
 	ALSO CPI breaching (2,6)% not affected by WPI trends]
