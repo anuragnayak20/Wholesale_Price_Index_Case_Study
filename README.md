@@ -1,4 +1,4 @@
-# Price Insights Dashboard – India Wholesale Price Analysis & Forecasting
+# WPI Case Study - Uncovering wholesale retail inflation in India
 
 ## Objective
 This project analyzes India’s Wholesale Price Index (WPI) data to understand:
@@ -29,6 +29,17 @@ The goal is to provide clear and accurate **price insights, MoM and YoY trends**
 - **Detailed Analysis** : Excel(XLOOKUP, INDEX-MATCH, Formulae, Pivot Tables, Pivot Charts, Power Query)
 - **Visuals** : Power BI (DAX, Power Query, Creating clean visuals)
 
+## File Links
+- Data Sources :
+    - [`WPI source data`](data/raw/wpi_govt_data.csv)
+    - [`CPI source data`](data/raw/cpi_govt_data.csv)
+    - [`oil price data`](data/raw/oil_price_govt_data.xlsx)
+- EDA : 
+    - [`SQL EDA script`](analysis/anurag_SQL_eda/anurag_SQL_EDA.sql)
+    - [`EDA findings`](analysis/anurag_SQL_eda/anurag_sql_eda_findings.pdf)
+- Detailed Analysis : [`Excel analysis file`](analysis/anurag_excel_analysis.xlsx)
+- Power BI Dashboard : [`Power BI dashboard`](visuals/anurag_dashboard.pbix)
+
 ## Findings
 |Point of Interest|Finding|
 |-----------------|-------|
@@ -47,21 +58,29 @@ The goal is to provide clear and accurate **price insights, MoM and YoY trends**
 
 ## Data Visualisations
 1. **Identifying Primary Inflation Drivers for WPI**
+
 ![commodity trends - short to medium term](visuals/wpi_commodity_trend.png)
 
 ![commodity and category share](visuals/wpi_commodity_share.png)
+
 2. **Short to Medium term trend analysis for:**
+
 ![wpi medium to short term trend](visuals/wpi_medium_term_trend.png)
 
 ![wpi category share](visuals/medium%20term%20category%20share%20in%20wpi.png)
+
 3. **Impact of external variables on WPI (specific commodities and as a whole):**
+
 ![wpi and cpi](visuals/wpi_cpi_trend.png)
 
 ![wpi and oil prices](visuals/wpi_oil_trend.png)
 
 ![wpi and covid19](visuals/wpi_covid19.png)
+
 ![wpi and russia ukraine war](visuals/wpi_russia_ukraine_war.png)
+
 4. **Structure of WPI - is WPI biased towards any commodity(s)?**
+
 ![q4 answer](visuals/wpi_commodity_bias.png)
 
 ## Dashboard
