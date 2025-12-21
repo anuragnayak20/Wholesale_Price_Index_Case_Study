@@ -1,70 +1,36 @@
 # Price Insights Dashboard – India Wholesale Price Analysis & Forecasting
 
-## 📌 Purpose
+## Objective
 This project analyzes India’s Wholesale Price Index (WPI) data to understand:
-- How commodity prices have changed over time  
-- Which items show high inflation  
-- Which commodities are most volatile  
-- How prices behave seasonally  
-- What future price trends may look like  
+- Which commodities show consistently high inflation  
+- which commodities show abnormal volatility  
+- Time series trend analysis of WPI itself
+- The effect of external events or variables (e.g. CPI, Oil prices) on WPI
 
-The goal is to provide clear and accurate **price insights and short-term forecasts** using simple analytical tools.
+The goal is to provide clear and accurate **price insights, MoM and YoY trends** using simple analytical tools.
 
----
+## Problem Statement
+1. Identifying Primary Inflation Drivers for WPI
+2. Short to Medium term trend analysis for:
+    - Full WPI
+    - Manufacturing Category
+    - Primary Articles Category
+    - Fuel & Power Category
+3. Impact of external variables on WPI (specific commodities and as a whole):
+    - CPI
+    - Global Oil Prices
+    - Black Swan Events like Covid 19 & Russia Ukraine war
+4. Structure of WPI - is WPI biased towards any commodity(s)?
 
-## 🛠 Tech Stack Used
-This project is built using only three tools:
+## Findings
+|Point of Interest|Finding|
+| Primary Inflation Drivers | - Primary Commodity : Food Products Manufacturing |
+|                           | - testing |
+## Data Visualization
 
-### **1. Excel**
-- Data cleaning  
-- Calculations (MoM, YoY, volatility, seasonality)  
-- Pivot tables  
-
-### **2. MySQL**
-- Store cleaned time-series data  
-- Run analytical SQL queries for trends, ranking, and volatility  
-
-### **3. Power BI**
-- Interactive dashboard  
-- Trend analysis  
-- Inflation ranking  
-- Volatility charts  
-- Seasonal heatmaps  
-- Forecast visualization  
-
----
-
-## 📊 What This Project Analyzes
-
-### **Inflation Metrics**
-- **YoY Inflation %** (Year-over-Year change)  
-- **MoM Inflation %** (Month-over-Month change)  
-- **Overall Inflation (2012–2023)**  
-
-### **Volatility Metrics**
-- Standard deviation of monthly prices  
-- Identify stable vs. unstable commodities  
-
-### **Seasonality**
-- Find months with recurring price spikes  
-- Seasonal heatmap for all major commodities  
-
-### **Trend Analysis**
-- 10+ year price trends  
-- Food vs Non-food comparison  
-- Cereal vs Vegetable comparison  
-
-### **Ranking & Comparison**
-- Highest inflation commodities  
-- Items with biggest rise in the last 1 year  
-- Commodity correlations (e.g., Wheat vs Rice, Onion vs Tomato)
-
----
-
-## 🔮 Forecasting Summary
-- Prepare monthly time-series for each commodity  
-- Train **ARIMA** or **Prophet** forecasting model  
-- Predict next **6–12 months**  
-- Import forecast output into Power BI for visualization  
-
-This helps users understand expected price movement using proven time-series models.
+## Tech Stack & Workflow
+- **Data gathering** : govt website - [`Govt of India Datasets`](https://www.data.gov.in/)
+- **Data Cleaning & Prepping** : MySQL + Excel(Power Query and Excel formulae)
+- **EDA** : MySQL(Subqueries, CTE, Joins, Views, Window functions)
+- **Detailed Analysis** : Excel(XLOOKUP, INDEX-MATCH, Formulae, Pivot Tables, Pivot Charts, Power Query)
+- **Visuals** : Power BI (DAX, Power Query, Creating clean visuals)
