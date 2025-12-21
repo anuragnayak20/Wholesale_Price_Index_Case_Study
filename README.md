@@ -24,8 +24,11 @@ The goal is to provide clear and accurate **price insights, MoM and YoY trends**
 
 ## Findings
 |Point of Interest|Finding|
-| Primary Inflation Drivers | - Primary Commodity : Food Products Manufacturing |
-|                           | - testing |
+|-----------------|-------|
+| Primary Inflation Drivers | Primary Commodity : Food Products Manufacturing |
+|                           | testing |
+
+
 ## Data Visualization
 
 ## Tech Stack & Workflow
