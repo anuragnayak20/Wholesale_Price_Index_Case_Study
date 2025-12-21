@@ -11,12 +11,14 @@ The goal is to provide clear and accurate **price insights, MoM and YoY trends**
 
 ## Problem Statement
 **1. Identifying Primary Inflation Drivers for WPI**
+
 **2. Short to Medium term trend analysis for:**
     - Full WPI
     - Manufacturing Category
     - Primary Articles Category
     - Fuel & Power Category
 **3. Impact of external variables on WPI (specific commodities and as a whole):**
+
     - CPI
     - Global Oil Prices
     - Black Swan Events like Covid 19 & Russia Ukraine war
