@@ -42,8 +42,8 @@ The goal is to provide clear and accurate **price insights, MoM and YoY trends**
 - Detailed Analysis : [`Excel analysis file`](analysis/anurag_excel_analysis.xlsx)
 - Power BI Dashboard : [`Power BI dashboard`](visuals/anurag_dashboard.pbix)
 
-## Findings
-|Point of Interest|Finding|
+## Key Insights
+|Point of Interest|Findings|
 |-----------------|-------|
 | **1. Primary Inflation Drivers** | Primary Commodity : Food Products Manufacturing |
 |  | Primary Category : Manufacturing Sector |
