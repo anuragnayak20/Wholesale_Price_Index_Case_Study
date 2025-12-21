@@ -23,11 +23,13 @@ The goal is to provide clear and accurate **price insights, MoM and YoY trends**
 4. Structure of WPI - is WPI biased towards any commodity(s)?
 
 ## Tech Stack & Workflow
-- **Data gathering** : govt website - [`Govt of India Datasets`](https://www.data.gov.in/)
-- **Data Cleaning & Prepping** : MySQL + Excel(Power Query and Excel formulae)
-- **EDA** : MySQL(Subqueries, CTE, Joins, Views, Window functions)
-- **Detailed Analysis** : Excel(XLOOKUP, INDEX-MATCH, Formulae, Pivot Tables, Pivot Charts, Power Query)
-- **Visuals** : Power BI (DAX, Power Query, Creating clean visuals)
+| Stages | Tools & Techniques |
+|---------|------------------|
+|**Data gathering** | govt website - [`Govt of India Datasets`](https://www.data.gov.in/) |
+| **Data Cleaning & Prepping** | MySQL + Excel(Power Query and Excel formulae) |
+| **EDA** | MySQL(Subqueries, CTE, Joins, Views, Window functions) |
+| **Detailed Analysis** | Excel(XLOOKUP, INDEX-MATCH, Formulae, Pivot Tables, Pivot Charts, Power Query) |
+| **Visuals** | Power BI (DAX, Power Query, Creating clean visuals) |
 
 ## File Links
 - Data Sources :
