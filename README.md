@@ -10,17 +10,17 @@ This project analyzes India’s Wholesale Price Index (WPI) data to understand:
 The goal is to provide clear and accurate **price insights, MoM and YoY trends** using simple analytical tools.
 
 ## Problem Statement
-1. Identifying Primary Inflation Drivers for WPI
-2. Short to Medium term trend analysis for:
+**1. Identifying Primary Inflation Drivers for WPI**
+**2. Short to Medium term trend analysis for:**
     - Full WPI
     - Manufacturing Category
     - Primary Articles Category
     - Fuel & Power Category
-3. Impact of external variables on WPI (specific commodities and as a whole):
+**3. Impact of external variables on WPI (specific commodities and as a whole):**
     - CPI
     - Global Oil Prices
     - Black Swan Events like Covid 19 & Russia Ukraine war
-4. Structure of WPI - is WPI biased towards any commodity(s)?
+**4. Structure of WPI - is WPI biased towards any commodity(s)?**
 
 ## Tech Stack & Workflow
 | Stages | Tools & Techniques |
@@ -45,18 +45,18 @@ The goal is to provide clear and accurate **price insights, MoM and YoY trends**
 ## Findings
 |Point of Interest|Finding|
 |-----------------|-------|
-| 1. Primary Inflation Drivers | Primary Commodity : Food Products Manufacturing |
+| **1. Primary Inflation Drivers** | Primary Commodity : Food Products Manufacturing |
 |  | Primary Category : Manufacturing Sector |
-| 2. Short to Medium term trend | While WPI itself remained stable, its MoM growth rate also remained usually in -2% to 2% range in the last 10 months |
+| **2. Short to Medium term trend** | While WPI itself remained stable, its MoM growth rate also remained usually in -2% to 2% range in the last 10 months |
 | | short spike noticed in July 2023 |
 | | can be attributed to sudden increase in Fruit & Veggies prices |
 | | Manufacturing sector continued to dominate throughout last 10 months|
-| 3. Impact of external variables on WPI | CPI & WPI exhibit strong correlation in MoM basis(between Jan 2022 to Oct 2023) |
+| **3. Impact of external variables on WPI** | CPI & WPI exhibit strong correlation in MoM basis(between Jan 2022 to Oct 2023) |
 | | BUT in YoY trends , CPI & WPI start to diverge |
 | | Global Oil Prices have strong correlation with crude petroluem, less with whole fuel sector, and least effect on WPI as a whole |
 | | Covid 19: Immediately after Dec 2019, till Mar 2020 there is WPI MoM decline, but later zigzag trend |
 | | Russia-Ukraine War : Short term boost to WPI MoM% later again zigzag pattern |
-| 4. Structure of WPI as a metric | It is clear that out of 869 commodities, the WPI is biased or prioritises only 183 |
+| **4. Structure of WPI as a metric** | It is clear that out of 869 commodities, the WPI is biased or prioritises only 183 |
 
 ## Data Visualisations
 1. **Identifying Primary Inflation Drivers for WPI**
